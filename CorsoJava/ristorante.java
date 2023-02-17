@@ -43,7 +43,8 @@ public class ristorante{
 
     public static void Compra(){
         Scanner oggetto = new Scanner(System.in);
-        int scelta; 
+        int scelta;
+        double budget = Math.random() * 10; 
         for(int i=0; i<nomepiatti.length; i++){
             System.out.println("il piatto numero: " + i +" è:\n");
             System.out.println(nomepiatti[i] + "\ngli ingredienti sono: " + ingredientipiatti[i] +  "\nIl prezzo è: " + prezzi[i] + "\nne rimangono: "  + disponibilita[i] + "\n");
@@ -58,9 +59,15 @@ public class ristorante{
                 }
                 //controlla la disponibilita del piatto e se si può ordinare la diminuisce di uno
                 else if(disponibilita[scelta]>0){
-                    System.out.println("Piatto ordinato.");
-                    disponibilita[scelta] = disponibilita[scelta]-1;
-                    Menu(); //torna al menu
+                    if(budget > prezzi[i]){    
+                        System.out.println("Piatto ordinato.");
+                        disponibilita[scelta] = disponibilita[scelta]-1;
+                        Menu(); //torna al menu
+                    }
+                    else{
+                        System.out.println("Non hai abbastanza soldi");
+                        Menu();
+                    }
                 }
                 else if(disponibilita[scelta]<=0){
                     System.out.println("Piatto esaurito.");
