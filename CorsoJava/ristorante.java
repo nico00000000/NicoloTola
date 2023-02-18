@@ -101,8 +101,8 @@ public class ristorante{
         String password = "1234", passwordUser;
         System.out.println("Inserisci la password: "); 
         passwordUser = oggetto.nextLine();
-        //controlla la password che ho settato ma per qualche motivo chiude il programma
-        if(passwordUser == password){
+        //controlla la password che ho settato
+        if(passwordUser.compareTo(password)==0){
             System.out.println("Vuoi resettare=1 o aggiungere un piatto=2?: ");
             scelta = oggetto1.nextInt();
             switch(scelta){
