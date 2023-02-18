@@ -44,8 +44,8 @@ public class ristorante{
     public static void Compra(){
         Scanner oggetto = new Scanner(System.in);
         int scelta;
-        double budget = Math.random() * 10; 
-        for(int i=0; i<nomepiatti.length; i++){
+        double budget = Math.random() * 600; 
+        for(int i=0; i<nomepiatti.length+1; i++){
             System.out.println("il piatto numero: " + i +" è:\n");
             System.out.println(nomepiatti[i] + "\ngli ingredienti sono: " + ingredientipiatti[i] +  "\nIl prezzo è: " + prezzi[i] + "\nne rimangono: "  + disponibilita[i] + "\n");
             System.out.println("inserisci il numero del piatto per ordinarlo oppure -1 per tornare al menu: ");
