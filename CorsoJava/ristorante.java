@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class ristorante{
     //dichiaro gli array e la lunghezza iniziale fuori in modo che siano globali e accessibili dalle funzioni
+    
+    //errore dell'array risolto, stavo passando un elemento alla posizione nomepiatti.lenght che saltava una posizione (nomepiatti.lenght risulta essere 2 ma la posizione dell'array 2 risulta vuota)
+
     static String[] nomepiatti = {"pasta al pesto", "carbonara"};
     static String[] ingredientipiatti = {"pasta e pesto", "guanciale, uova, pecorino, pasta"};
     static int[] prezzi = {15, 500};
@@ -45,7 +48,7 @@ public class ristorante{
         Scanner oggetto = new Scanner(System.in);
         int scelta;
         double budget = Math.random() * 600; 
-        for(int i=0; i<nomepiatti.length+1; i++){
+        for(int i=0; i<nomepiatti.length; i++){
             System.out.println("il piatto numero: " + i +" è:\n");
             System.out.println(nomepiatti[i] + "\ngli ingredienti sono: " + ingredientipiatti[i] +  "\nIl prezzo è: " + prezzi[i] + "\nne rimangono: "  + disponibilita[i] + "\n");
             System.out.println("inserisci il numero del piatto per ordinarlo oppure -1 per tornare al menu: ");
@@ -132,17 +135,18 @@ public class ristorante{
             Scanner oggetto3 = new Scanner(System.in);
             Scanner oggetto4 = new Scanner(System.in);
             boolean i=true;
-            int scelta, lunghezza;
+            int scelta, lunghezza; 
+            //errore con gli scanner, vanno svuotati
             while(i == true){
                 lunghezza = nomepiatti.length;
                 System.out.println("inserisci il nome del piatto: ");
-                nomepiatti[lunghezza+1] = oggetto.nextLine();
+                nomepiatti[lunghezza-1] = oggetto.nextLine();
                 System.out.println("inserisci gli ingredienti del piatto: ");
-                ingredientipiatti[lunghezza+1] = oggetto1.nextLine();
+                ingredientipiatti[lunghezza-1] = oggetto1.nextLine();
                 System.out.println("inserisci il prezzo del piatto: ");
-                prezzi[lunghezza+1] = oggetto3.nextInt();
+                prezzi[lunghezza-1] = oggetto3.nextInt();
                 System.out.println("inserisci quanti piatti ci sono disponibili: ");
-                disponibilita[lunghezza+1] = oggetto3.nextInt();
+                disponibilita[lunghezza-1] = oggetto3.nextInt();
 
                 System.out.println("piatto inserito");
 
@@ -158,13 +162,19 @@ public class ristorante{
                 default:
                     System.out.println("Input invalido, torna al menu");
                     Menu();
-                }               
+                }
+                //mando gli scanner alla linea successiva per liberarli e poter inserire più elementi ma dà comunque problemi dopo il secondo inserimento
+                oggetto.nextLine(); 
+                oggetto1.nextLine();
+                oggetto2.nextLine();
+                oggetto3.nextLine();
+                oggetto4.nextLine();            
             }
             oggetto.close();
             oggetto1.close();
             oggetto2.close();
             oggetto3.close();
-            oggetto4.close();
+            oggetto4.close();   
         }
         /*funzione che prende la lunghezza iniziale e la confronta con quella attuale e scorre l'array fino a raggiungere
          la lunghezza iniziale e setta tutti gli elementi a null o 0 fino a raggiungere quelli di base
