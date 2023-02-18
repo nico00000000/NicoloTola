@@ -103,7 +103,7 @@ public class ristorante{
         passwordUser = oggetto.nextLine();
         //controlla la password che ho settato
         if(passwordUser.compareTo(password)==0){
-            System.out.println("Vuoi resettare=1 o aggiungere un piatto=2?: ");
+            System.out.println("Vuoi resettare=2 o aggiungere un piatto=1?: ");
             scelta = oggetto1.nextInt();
             switch(scelta){
                 case 1:
