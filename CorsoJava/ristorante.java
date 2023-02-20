@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ristorante{
     //dichiaro gli array e la lunghezza iniziale fuori in modo che siano globali e accessibili dalle funzioni
     
-    //errore dell'array risolto, stavo passando un elemento alla posizione nomepiatti.lenght che saltava una posizione (nomepiatti.lenght risulta essere 2 ma la posizione dell'array 2 risulta vuota)
+    //la lunghezza degli array è settata a 2 e quindi da errore nella funzione aggiungi
 
     static String[] nomepiatti = {"pasta al pesto", "carbonara"};
     static String[] ingredientipiatti = {"pasta e pesto", "guanciale, uova, pecorino, pasta"};
