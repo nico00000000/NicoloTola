@@ -13,7 +13,7 @@ public class esercizioArray2 {
     }
 
     public static void Menu(){
-        int scelta,s2;
+        int scelta;
         Scanner oggetto1 = new Scanner(System.in);
         Scanner oggetto = new Scanner(System.in);
 
@@ -22,18 +22,20 @@ public class esercizioArray2 {
         switch(scelta){
             case 1:
                 for(int i = 0; i < numeri.length; i++){
-                    System.out.println(numeri[]);
+                    System.out.println(numeri[i]);
                 }
                 break;
             case 2:
                 for(int i = 0; i < numeri.length; i++){
-                    System.out.println(numeri[]);
+                    System.out.println(numeri[i]);
                 }
                 break;
             default:
                 System.out.println("input invalido, riprova");
                 System.exit(0);
         }
+        
+        Aggiungi();
     }
 
     public static void Aggiungi(){
@@ -50,19 +52,20 @@ public class esercizioArray2 {
                 ArrayList<Integer> lista1 = new ArrayList<Integer>(Arrays.asList(numeri));
                 lista1.add(num);
 
-                numeri = arrayList.toArray(numeri);
+                numeri = lista1.toArray(numeri);
                 break;
             case 2:
                 System.out.println("Aggiungi una parola: ");
                 parola = oggetto.nextLine();
                 ArrayList<String> lista2 = new ArrayList<String>(Arrays.asList(stringhe));
                 lista2.add(parola);
-                stringhe = arrayList.toArray(stringhe);
+                stringhe = lista2.toArray(stringhe);
                 break;
             default:
                 System.out.println("input invalido, riprova");
                 Menu();
         }
         Menu();
+        oggetto.close();
     }
 }
