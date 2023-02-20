@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class ristorante{
     //dichiaro gli array e la lunghezza iniziale fuori in modo che siano globali e accessibili dalle funzioni
     
-    //la lunghezza degli array è settata a 2 e quindi da errore nella funzione aggiungi
+    //la lunghezza degli array è settata a 2 e quindi da errore nella funzione aggiungi 
+
+    //implementa i for each
 
     static String[] nomepiatti = {"pasta al pesto", "carbonara"};
     static String[] ingredientipiatti = {"pasta e pesto", "guanciale, uova, pecorino, pasta"};
