@@ -8,9 +8,18 @@ public class ristorante{
     //implementa i for each
 
     static String[] nomepiatti = {"pasta al pesto", "carbonara"};
+    static ArrayList<String> dishname = new ArrayList<String>(Arrays.asList(nomepiatti));
+
+    
     static String[] ingredientipiatti = {"pasta e pesto", "guanciale, uova, pecorino, pasta"};
+    static ArrayList<String> ingredients = new ArrayList<String>(Arrays.asList(ingredientipiatti));
+    
     static Integer[] prezzi = {15, 500};
+    static ArrayList<Integer> price = new ArrayList<Integer>(Arrays.asList(prezzi));
+    
     static Integer[] disponibilita = {10, 20};
+    static ArrayList<Integer> quantity = new ArrayList<Integer>(Arrays.asList(disponibilita));
+    
     static int lunghezzainiziale = nomepiatti.length;
     public static void main(String[] args){
         Menu();
@@ -143,28 +152,24 @@ public class ristorante{
             while(i == true){
                 System.out.println("inserisci il nome del piatto: ");
                 inputword = oggetto.nextLine();
-                ArrayList<String> dishname = new ArrayList<String>(Arrays.asList(nomepiatti));
+                
                 dishname.add(inputword);
-
                 nomepiatti = dishname.toArray(nomepiatti);
 
                 System.out.println("inserisci gli ingredienti del piatto: ");
                 inputword = oggetto1.nextLine();
-                ArrayList<String> ingredients = new ArrayList<String>(Arrays.asList(ingredientipiatti));
                 ingredients.add(inputword);
 
                 ingredientipiatti = ingredients.toArray(nomepiatti);
                 
                 System.out.println("inserisci il prezzo del piatto: ");
                 inputnum = oggetto3.nextInt();
-                ArrayList<Integer> price = new ArrayList<Integer>(Arrays.asList(prezzi));
                 price.add(inputnum);
 
                 prezzi = price.toArray(prezzi);
                 
                 System.out.println("inserisci quanti piatti ci sono disponibili: ");
                 inputnum = oggetto3.nextInt();
-                ArrayList<Integer> quantity = new ArrayList<Integer>(Arrays.asList(disponibilita));
                 quantity.add(inputnum);
 
                 disponibilita = quantity.toArray(disponibilita);
@@ -201,17 +206,17 @@ public class ristorante{
          la lunghezza iniziale e setta tutti gli elementi a null o 0 fino a raggiungere quelli di base
          e lo fa solo se la lunghezza attuale è diversa da quella iniziale.*/
         public static void Resetta(){
-            int lunghezzaAttuale = nomepiatti.length;
+            int lunghezzaAttuale = dishname.size();
             if(lunghezzaAttuale == lunghezzainiziale){
                 System.out.println("Non sono stati aggiunti elementi.");
                 Menu();
             }
             else{    
                 for(int i=lunghezzaAttuale; i !=lunghezzainiziale; i--){
-                    nomepiatti[i]=null;
-                    ingredientipiatti[i]=null;
-                    prezzi[i]=0;
-                    disponibilita[i]= 0;
+                    dishname.remove(i);
+                    ingredients.remove(i);
+                    price.remove(i);
+                    quantity.remove(i);
                 }
             }
         }
