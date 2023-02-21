@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ristorante{
     //dichiaro gli array e la lunghezza iniziale fuori in modo che siano globali e accessibili dalle funzioni
-    
+
     //implementa i for each
 
     static String[] nomepiatti = {"pasta al pesto", "carbonara"};
@@ -137,11 +137,10 @@ public class ristorante{
             Scanner oggetto3 = new Scanner(System.in);
             Scanner oggetto4 = new Scanner(System.in);
             boolean i=true;
-            int scelta, lunghezza, inputnum;
+            int scelta, inputnum;
             String inputword; 
             //errore con gli scanner, vanno svuotati
             while(i == true){
-                lunghezza = nomepiatti.length;
                 System.out.println("inserisci il nome del piatto: ");
                 inputword = oggetto.nextLine();
                 ArrayList<String> dishname = new ArrayList<String>(Arrays.asList(nomepiatti));
