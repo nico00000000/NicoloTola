@@ -37,10 +37,11 @@ public class fibonacci {
             n = n1+n2;
             n1 = n2;
             n2 = n;
-            //stampa solo se è pari
+            System.out.println(n);
+            /*stampa solo se è pari
             if(n%2==0){                 
                 System.out.println(n);
-            }
+            }*/
         }
         oggetto.close();
     }
