@@ -1,16 +1,16 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ristorante{
     //dichiaro gli array e la lunghezza iniziale fuori in modo che siano globali e accessibili dalle funzioni
     
-    //la lunghezza degli array è settata a 2 e quindi da errore nella funzione aggiungi 
-
     //implementa i for each
 
     static String[] nomepiatti = {"pasta al pesto", "carbonara"};
     static String[] ingredientipiatti = {"pasta e pesto", "guanciale, uova, pecorino, pasta"};
-    static int[] prezzi = {15, 500};
-    static int[] disponibilita = {10, 20};
+    static Integer[] prezzi = {15, 500};
+    static Integer[] disponibilita = {10, 20};
     static int lunghezzainiziale = nomepiatti.length;
     public static void main(String[] args){
         Menu();
@@ -137,18 +137,38 @@ public class ristorante{
             Scanner oggetto3 = new Scanner(System.in);
             Scanner oggetto4 = new Scanner(System.in);
             boolean i=true;
-            int scelta, lunghezza; 
+            int scelta, lunghezza, inputnum;
+            String inputword; 
             //errore con gli scanner, vanno svuotati
             while(i == true){
                 lunghezza = nomepiatti.length;
                 System.out.println("inserisci il nome del piatto: ");
-                nomepiatti[lunghezza-1] = oggetto.nextLine();
+                inputword = oggetto.nextLine();
+                ArrayList<String> dishname = new ArrayList<String>(Arrays.asList(nomepiatti));
+                dishname.add(inputword);
+
+                nomepiatti = dishname.toArray(nomepiatti);
+
                 System.out.println("inserisci gli ingredienti del piatto: ");
-                ingredientipiatti[lunghezza-1] = oggetto1.nextLine();
+                inputword = oggetto1.nextLine();
+                ArrayList<String> ingredients = new ArrayList<String>(Arrays.asList(ingredientipiatti));
+                ingredients.add(inputword);
+
+                ingredientipiatti = ingredients.toArray(nomepiatti);
+                
                 System.out.println("inserisci il prezzo del piatto: ");
-                prezzi[lunghezza-1] = oggetto3.nextInt();
+                inputnum = oggetto3.nextInt();
+                ArrayList<Integer> price = new ArrayList<Integer>(Arrays.asList(prezzi));
+                price.add(inputnum);
+
+                prezzi = price.toArray(prezzi);
+                
                 System.out.println("inserisci quanti piatti ci sono disponibili: ");
-                disponibilita[lunghezza-1] = oggetto3.nextInt();
+                inputnum = oggetto3.nextInt();
+                ArrayList<Integer> quantity = new ArrayList<Integer>(Arrays.asList(disponibilita));
+                quantity.add(inputnum);
+
+                disponibilita = quantity.toArray(disponibilita);
 
                 System.out.println("piatto inserito");
 
