@@ -26,8 +26,8 @@ public class esercizioArray2 {
                 }
                 break;
             case 2:
-                for(int i = 0; i < numeri.length; i++){
-                    System.out.println(numeri[i]);
+                for(int i = 0; i < stringhe.length; i++){
+                    System.out.println(stringhe[i]);
                 }
                 break;
             default:
@@ -42,6 +42,7 @@ public class esercizioArray2 {
         int s2,num;
         String parola;
         Scanner oggetto = new Scanner(System.in);
+        Scanner oggetto1 = new Scanner(System.in);
         System.out.println("Scegli a quale array aggiungere elementi:\n1 numeri\n2 stringhe\n: ");
         s2=oggetto.nextInt();
 
@@ -56,9 +57,10 @@ public class esercizioArray2 {
                 break;
             case 2:
                 System.out.println("Aggiungi una parola: ");
-                parola = oggetto.nextLine();
+                parola = oggetto1.nextLine();
                 ArrayList<String> lista2 = new ArrayList<String>(Arrays.asList(stringhe));
                 lista2.add(parola);
+                
                 stringhe = lista2.toArray(stringhe);
                 break;
             default:
