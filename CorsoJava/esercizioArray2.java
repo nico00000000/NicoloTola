@@ -14,7 +14,6 @@ public class esercizioArray2 {
 
     public static void Menu(){
         int scelta;
-        Scanner oggetto1 = new Scanner(System.in);
         Scanner oggetto = new Scanner(System.in);
 
         System.out.println("Scegli quale visualizzare:\n1 numeri\n2 stringhe\n: ");
@@ -36,6 +35,7 @@ public class esercizioArray2 {
         }
         
         Aggiungi();
+        oggetto.close();
     }
 
     public static void Aggiungi(){
@@ -69,5 +69,6 @@ public class esercizioArray2 {
         }
         Menu();
         oggetto.close();
+        oggetto1.close();
     }
 }
