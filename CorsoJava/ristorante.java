@@ -205,14 +205,14 @@ public class ristorante{
         /*funzione che prende la lunghezza iniziale e la confronta con quella attuale e scorre l'array fino a raggiungere
          la lunghezza iniziale e setta tutti gli elementi a null o 0 fino a raggiungere quelli di base
          e lo fa solo se la lunghezza attuale è diversa da quella iniziale.*/
-        public static void Resetta(){
+        public static void Resetta(){ //non funziona il reset (No line found)
             int lunghezzaAttuale = dishname.size();
             if(lunghezzaAttuale == lunghezzainiziale){
                 System.out.println("Non sono stati aggiunti elementi.");
                 Menu();
             }
             else{    
-                for(int i=lunghezzaAttuale; i !=lunghezzainiziale; i--){
+                for(int i=lunghezzaAttuale-1; i !=lunghezzainiziale; i--){
                     dishname.remove(i);
                     ingredients.remove(i);
                     price.remove(i);
