@@ -8,7 +8,30 @@ public class registrazione {
 
 
     public static void main(String[] args){
-        Menu();    
+        menuIniziale();    
+    }
+
+    public static void menuIniziale(){
+        Scanner oggetto = new Scanner(System.in);
+        int scelta;
+
+        System.out.println("Scegli cosa fare:\n1 registrati\n2 login\n0 esci\n: ");
+        scelta = oggetto.nextInt();
+
+        switch(scelta){
+            case 1:
+                Registrati();
+                break;
+            case 2: 
+                Login();
+                break;
+            case 0:
+                System.exit(0);
+            default:
+                System.out.println("Input errato, riprova");
+                menuIniziale();
+        }
+        oggetto.close();
     }
 
     public static void Menu(){
@@ -128,5 +151,31 @@ public class registrazione {
             System.out.println("Username: " + usernames.get(i) + "Eta: " + age.get(i));
         }
     }
-    
+
+    public static void Login(){
+        Scanner oggetto = new Scanner(System.in);
+        String user, pass; 
+        int flag = 0;
+
+        System.out.println("inserisci il nome utente: ");
+        user = oggetto.nextLine();
+
+        System.out.println("Inserisci la password");
+        pass = oggetto.nextLine();
+
+        for(int i=0; i <= usernames.size(); i++){
+            if(usernames.get(i).equalsIgnoreCase(user) && password.get(i).equals(pass)){
+                Menu();
+                flag = 1;
+            }
+        }
+        if(flag != 1){
+            System.out.println("utente non trovato");
+            menuIniziale();
+        }
+        else{
+            Menu();
+        }
+        oggetto.close();
+    } 
 }
