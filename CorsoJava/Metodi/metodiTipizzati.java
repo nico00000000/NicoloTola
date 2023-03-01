@@ -26,6 +26,7 @@ public class metodiTipizzati {
                 System.out.println("Esco dal programma");
                 System.exit(0);
         }
+        oggetto.close();
     }
 
     public static  int intero(){
@@ -33,6 +34,7 @@ public class metodiTipizzati {
         Scanner oggetto = new Scanner(System.in);
         System.out.println("input: ");
         x = oggetto.nextInt();
+        oggetto.close();
         return x;
     }
 
@@ -41,6 +43,7 @@ public class metodiTipizzati {
         Scanner oggetto = new Scanner(System.in);
         System.out.println("input: ");
         x = oggetto.nextDouble();
+        oggetto.close();
         return x;
     }
 
@@ -49,6 +52,7 @@ public class metodiTipizzati {
         Scanner oggetto = new Scanner(System.in);
         System.out.println("input: ");
         x = oggetto.nextLine();
+        oggetto.close();
         return x;
     }
 
@@ -62,6 +66,7 @@ public class metodiTipizzati {
             x = true;
         }
         else x = false;
+        oggetto.close();
         return x;
     }
 }
