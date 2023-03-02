@@ -20,20 +20,19 @@ public class ESprepared2 {
             else{
                 System.out.println("connessione stabilita");
             
-            String query = String.format("select country.Name," + 
-            " case when country.Population > 100000 then 'la superficie è maggiore di 100.000' when country.Population < 100000 then ' la superficie è minore di 100.000' else 'la superficie è 100.000' end," + 
-            " ifnull(country.IndepYear, 'nessun indepyear') from country;");
+                String query = String.format("select country.Name," + 
+                " case when country.Population > 100000 then 'la superficie è maggiore di 100.000' when country.Population < 100000 then ' la superficie è minore di 100.000' else 'la superficie è 100.000' end," + 
+                " ifnull(country.IndepYear, 'nessun indepyear') from country;");
             
-            Statement stm = myConnection.createStatement();
-            ResultSet rs=stm.executeQuery(query);
+                Statement stm = myConnection.createStatement();
+                ResultSet rs=stm.executeQuery(query);
 
-            while(rs.next()){
-                String tableFormat = String.format("Name: %s | Superficie: %s | IndepYear: %s", rs.getString(1),
+                while(rs.next()){
+                    String tableFormat = String.format("Name: %s | Superficie: %s | IndepYear: %s", rs.getString(1),
                                                                                         rs.getString(2),
                                                                                                 rs.getString(3));
-                System.out.println(tableFormat + "\n");
-            }
-            
+                    System.out.println(tableFormat + "\n");
+                }
             }
 
         }catch (Exception e) {
