@@ -1,3 +1,4 @@
+package metodi;
 import java.util.Scanner;
 
 public class ristorante{

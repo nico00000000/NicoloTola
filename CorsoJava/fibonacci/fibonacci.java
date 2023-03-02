@@ -1,3 +1,4 @@
+package fibonacci;
 import java.util.*;
 public class fibonacci {    
 
