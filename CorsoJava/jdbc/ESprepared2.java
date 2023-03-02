@@ -4,11 +4,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class ESprepared2{ //da finire con: scegliere se mostrare il nome della nazione a cui fa riferimento il code
+public class ESprepared2{
     public static void main(String[] args){    
         Scanner ogg = new Scanner(System.in); //string
         Scanner ogg1 = new Scanner(System.in); //int
-        int x,y;
+        int x;
         String scelta, sceltaOrd = null;
         String url = "jdbc:mysql://localhost:3306/world";
         String dbUserName = "root";
@@ -57,7 +57,8 @@ public class ESprepared2{ //da finire con: scegliere se mostrare il nome della n
                 stm.setInt(2, x);
 
                 ResultSet rs = stm.executeQuery();
-
+                
+                //potevo cambiare la stringa della query per scegliere se mostrare il nome della città a cui fa riferimento il code
                 System.out.println("Vuoi visualizzare il nome della città?\n1 si\n2 no\n: ");
                 x = ogg1.nextInt();
                 switch(x){

@@ -1,12 +1,7 @@
-package fibonacci;
-import java.util.*;
-public class fibonacci {    
-
-    public static void main(String[] args){
-        Menu();
-    }
-
-    public static void Menu(){
+import java.util.Scanner;
+public class menuFibonacci {
+    
+    public void Menu(){
         Scanner oggetto = new Scanner(System.in);
         int s;
         System.out.println("Inserisci 1 per stampare 2 per cercare un numero e 3 per uscire: ");
@@ -39,10 +34,6 @@ public class fibonacci {
             n1 = n2;
             n2 = n;
             System.out.println(n);
-            /*stampa solo se è pari
-            if(n%2==0){                 
-                System.out.println(n);
-            }*/
         }
         oggetto.close();
     }
@@ -64,9 +55,8 @@ public class fibonacci {
             }
         if(flag!=1){
             System.out.println("Numero non trovato.");
-            Menu();
+            //Menu();
         }
         oggetto.close();
     }
-
 }
