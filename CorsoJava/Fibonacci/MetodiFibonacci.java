@@ -1,28 +1,7 @@
+package Fibonacci;
 import java.util.Scanner;
-public class menuFibonacci {
-    
-    public void Menu(){
-        Scanner oggetto = new Scanner(System.in);
-        int s;
-        System.out.println("Inserisci 1 per stampare 2 per cercare un numero e 3 per uscire: ");
-        s = oggetto.nextInt();
-        switch(s){
-            case 1:
-                Stampanum();
-                break;
-            case 2:
-                Cercanum();
-                break;
-            case 3:
-                System.exit(0);
-            default:
-                System.out.println("input errato riprova");
-                Menu();
-        }
-        oggetto.close();
-    }
-
-    public static void Stampanum(){
+public class MetodiFibonacci {
+    public void Stampanum(){
         Scanner oggetto = new Scanner(System.in);
         int numero, n2 = 1, n1 = 0 ,n = 0;
 
@@ -38,7 +17,7 @@ public class menuFibonacci {
         oggetto.close();
     }
 
-    public static void Cercanum(){
+    public void Cercanum(){
         Scanner oggetto = new Scanner(System.in);
         int numero,flag = 0 , n2 = 1, n1 = 0 ,n = 0;
         System.out.println("inserisci quale numero vuoi trovare: ");
