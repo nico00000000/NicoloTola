@@ -8,25 +8,25 @@ public class Biblioteca{
     private int size;
     //getter e setter
 
-    public String GetLibroAt(int x){
+    public String GetLibroAt(int x){ //ottieni nome libro
         return Libro.get(x);
     }
 
-    public Integer GetNcopieAt(int x){
+    public Integer GetNcopieAt(int x){ //ottieni numero copie
         return Ncopie.get(x);
     }
 
-    public Integer GetNcipAt(int x){
+    public Integer GetNcipAt(int x){ //ottieni numero copie in prestito
         return Ncip.get(x);
     }
 
-    public Integer GetSize(){
+    public Integer GetSize(){ //ottieni la dimensione dell'array
         return size;
     }
 
     //setter
 
-    public void SetLibro(String nomelibro){
+    public void SetLibro(String nomelibro){ //setta il nome del libro
         this.Libro.add(nomelibro);
     }
 
@@ -42,21 +42,22 @@ public class Biblioteca{
         this.size = Libro.size();
     }
 
-    //metodi biblioteca
+    //setter con indici
 
-    public void prestaLibro(){
-        
+    public void SetNcopieAt(int index, int lip){ //setta numero copie con index specifico
+        this.Ncopie.set(index, lip);
     }
 
-    public void restituisciLibro(){
-        
+    public void SetNLipAt(int index, int lip){ //setta numero libri in prestito con index specifico
+        this.Ncopie.set(index, lip);
     }
 
-    public void aggiungiLibro(){
-        
+    //elimina elemento
+
+    public void DelLibro(int x){
+        this.Libro.set(x, null);
+        this.Ncopie.set(x, 0);
+        this.Ncip.set(x, 0);
     }
     
-    public void rimuoviLibro(){
-        
-    }
 }
