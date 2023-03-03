@@ -1,12 +1,7 @@
 package Fibonacci;
-import java.util.Scanner;
 public class MetodiFibonacci {
-    public void Stampanum(){
-        Scanner oggetto = new Scanner(System.in);
-        int numero, n2 = 1, n1 = 0 ,n = 0;
-
-        System.out.println("inserisci quanti numeri della sequenza vuoi visualizzare: ");
-        numero = oggetto.nextInt();
+    public void Stampanum(int numero){
+        int n2 = 1, n1 = 0 ,n = 0;
 
         for(int i = 0; i<numero; i++){
             n = n1+n2;
@@ -14,14 +9,10 @@ public class MetodiFibonacci {
             n2 = n;
             System.out.println(n);
         }
-        oggetto.close();
     }
 
-    public void Cercanum(){
-        Scanner oggetto = new Scanner(System.in);
-        int numero,flag = 0 , n2 = 1, n1 = 0 ,n = 0;
-        System.out.println("inserisci quale numero vuoi trovare: ");
-        numero = oggetto.nextInt();
+    public void Cercanum(int numero){
+        int flag = 0 , n2 = 1, n1 = 0 ,n = 0;
         while(n<=numero && flag != 1){
                 n = n1+n2;
                 n1 = n2;
@@ -36,6 +27,5 @@ public class MetodiFibonacci {
             System.out.println("Numero non trovato.");
             //Menu();
         }
-        oggetto.close();
     }
 }
