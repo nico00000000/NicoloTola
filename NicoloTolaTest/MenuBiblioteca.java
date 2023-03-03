@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MenuBiblioteca{
     
     public static void Menu(){
-        //MetodiBiblioteca ogg = new MetodiBiblioteca();
+        //MetodiBiblioteca ogg = new MetodiBiblioteca(); CAUSA ERRORE
         Scanner sca = new Scanner(System.in);
         int scelta;
 

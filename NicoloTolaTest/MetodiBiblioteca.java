@@ -18,6 +18,8 @@ public class MetodiBiblioteca {
             //incrementa numero copie in prestito
             temp = bib.GetNcipAt(l);
             bib.SetNLipAt(l,temp++);
+
+            System.out.println("libro preso in prestito");
         }
         else{
             System.out.println("il libro non è disponibile");
@@ -41,6 +43,8 @@ public class MetodiBiblioteca {
             //decerementa numero copie in prestito
             temp = bib.GetNcipAt(l);
             bib.SetNLipAt(l,temp--);
+
+            System.out.println("libro restituito");
         }
         else{
             System.out.println("il libro non è disponibile");
@@ -64,7 +68,7 @@ public class MetodiBiblioteca {
 
         bib.NLip(0); //la setto a 0 perchè essendo stata appena inserita è impossibile che ne siano già stati dati in prestito
         
-        System.out.println("Libro aggiunto"); // se aggiungo + bib.GetLibroAt(0) il libro inserito esce in output  
+        System.out.println("Libro aggiunto");  
 
         MenuBiblioteca.Menu();
         ogg.close();
@@ -82,6 +86,7 @@ public class MetodiBiblioteca {
 
         bib.DelLibro(l);
         
+        System.out.println("libro eliminato");
         MenuBiblioteca.Menu();
         ogg.close();
     }
