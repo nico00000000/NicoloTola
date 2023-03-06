@@ -26,6 +26,9 @@ public class registratore {
                 System.exit(0);
             }
         }
+
+        fel1.numerovite();
+
         do{
             System.out.println("Che tipo di animale hai portato?: ");
             scelta = inserimento.nextInt();

@@ -2,7 +2,7 @@ package es6.es6Marzo;
 
 import java.util.ArrayList;
 
-public class anfibi {
+public class anfibi extends animale{
     private ArrayList<String> nome = new ArrayList<String>();
     ArrayList<Integer> eta = new ArrayList<Integer>(); 
     int Nanimali;
@@ -17,5 +17,14 @@ public class anfibi {
 
     public String getNome(int index){
         return this.nome.get(index);
+    }
+
+    public void verso(){
+        System.out.println("ciao");
+    }
+
+    public void numerovite(){
+        nVite = 54;
+        System.out.println(nVite);
     }
 }
