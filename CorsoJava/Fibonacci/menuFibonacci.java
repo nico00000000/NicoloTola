@@ -8,7 +8,7 @@ public class menuFibonacci {
         MetodiFibonacci ogg1 = new MetodiFibonacci();
         int s,num;
         boolean ciclo = true;
-        while(ciclo == true){    
+        do{    
             System.out.println("Inserisci 1 per stampare 2 per cercare un numero e 3 per uscire: ");
             s = oggetto.nextInt();
             switch(s){
@@ -30,18 +30,20 @@ public class menuFibonacci {
             }
             System.out.println("vuoi continuare?: 1 si 2 no ");
             s = oggetto.nextInt();
-            if(s == 1 || s == 2){
-                if(s == 1){
-                    ciclo = true;
-                }else if(s == 2){
-                    ciclo = false; 
-                }
+            if(s == 2 || s == 1){
+               if(s==2){
+                ciclo = false;
+                //return; il return esce dal ciclo
+               }
+               if(s==1){
+                ciclo = true;
+               } 
             }
             else{
                 System.out.println("input errato");
                 System.exit(0);
             }
-        }
+        }while(ciclo == true);
 
         oggetto.close();
         oggetto1.close();

@@ -12,14 +12,15 @@ public class MetodiFibonacci {
     }
 
     public void Cercanum(int numero){
-        int flag = 0 , n2 = 1, n1 = 0 ,n = 0;
+        int cont = 0, flag = 0 , n2 = 1, n1 = 0 ,n = 0;
         while(n<=numero && flag != 1){
                 n = n1+n2;
                 n1 = n2;
                 n2 = n;
+                cont++;
                 //stampa solo se è il numero che cerco
                 if(n==numero){
-                    System.out.println("Numero trovato: " + n);
+                    System.out.println("Numero trovato in posizione: " + cont);
                     flag = 1;
                 }
             }
@@ -27,5 +28,9 @@ public class MetodiFibonacci {
             System.out.println("Numero non trovato.");
             //Menu();
         }
+    }
+
+    public void InputFibonacci(String messaggio, int scelta){
+
     }
 }
