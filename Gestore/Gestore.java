@@ -13,4 +13,10 @@ public class Gestore {
         String y = x.toString();
         valori.add(y);
     }
+
+    void Visualizza(){
+        for(int i =0; i<size; i++){
+            System.out.println(valori.get(i));
+        }
+    }
 }

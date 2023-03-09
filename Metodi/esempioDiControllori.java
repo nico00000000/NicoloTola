@@ -1,3 +1,4 @@
+package Metodi;
 import java.util.Scanner;
 public class esempioDiControllori {
     public static void main(String[] args){

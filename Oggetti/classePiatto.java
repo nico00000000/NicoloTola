@@ -1,3 +1,4 @@
+package Oggetti;
 import java.util.Scanner;
 public class classePiatto {
     public static void main(String[] args){

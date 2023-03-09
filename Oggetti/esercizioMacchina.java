@@ -1,3 +1,4 @@
+package Oggetti;
 import java.util.Scanner;
 public class esercizioMacchina {
     public static void main(String[] args){

@@ -1,3 +1,4 @@
+package Oggetti;
 public class costruttore {
     int anno;
     String nome, sala;

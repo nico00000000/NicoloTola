@@ -1,3 +1,4 @@
+package Oggetti;
 public class esempioOggetti {
     int x = 55; 
     boolean y = false;

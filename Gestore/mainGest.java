@@ -16,8 +16,9 @@ public class mainGest {
         gest.ConvertiInt(x);
         gest.ConvertiDouble(y);
 
-        for(int i =0; i<gest.size; i++){
-            gest.valori.get(i);
-        }
+        gest.Visualizza();
+
+        ogg1.close();
+        ogg2.close();
     }
 }

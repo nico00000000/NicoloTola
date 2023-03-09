@@ -1,4 +1,4 @@
-package es6.es6Marzo;
+package es6Marzo;
 import java.util.Scanner;
 
 public class registratore {

@@ -1,3 +1,4 @@
+package Oggetti;
 
 public class getEset{
     private String name;

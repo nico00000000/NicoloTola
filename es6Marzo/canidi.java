@@ -1,10 +1,10 @@
-package es6.es6Marzo;
+package es6Marzo;
 
 import java.util.ArrayList;
 
-public class anfibi extends animale{
+public class canidi extends animale{
     private ArrayList<String> nome = new ArrayList<String>();
-    ArrayList<Integer> eta = new ArrayList<Integer>(); 
+    ArrayList<Integer> eta = new ArrayList<Integer>();
     int Nanimali;
 
     public void setNome(String nome, Integer eta){
@@ -20,11 +20,11 @@ public class anfibi extends animale{
     }
 
     public void verso(){
-        System.out.println("ciao");
+        System.out.println("bau");
     }
 
     public void numerovite(){
-        nVite = 54;
+        nVite = 1;
         System.out.println(nVite);
     }
 }

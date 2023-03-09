@@ -1,3 +1,4 @@
+package Oggetti;
 public class Auto{
     public static void main(String[] args){
         Auto ogg1 = new Auto();
