@@ -1,26 +1,28 @@
 package InnerClass.EsLibreria2;
 public class libreria {
     private int libroNum;
-    
     class libro{
-        private String genere;
+        private static String genere;
 
         //getter
 
         String getGenere(){
-            return this.genere;
+            return libro.genere;
         }
 
         //setter
 
         void setGenere(String genere){
-            this.genere = genere;
+            libro.genere = genere;
         }
     }
-
     libreria(String Gen){
-        libro book = new libro();
-        book.genere = Gen;
+        libro.genere = Gen;
         this.libroNum++;
     }
+    //override del metodo di default toString  
+    @Override
+    public String toString() {
+        return ("Genere: " + libro.genere + "\nNumero di libri: " + this.libroNum + "\n");
+   }
 }
