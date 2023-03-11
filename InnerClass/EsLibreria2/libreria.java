@@ -1,28 +1,46 @@
 package InnerClass.EsLibreria2;
+
+import java.util.ArrayList;
+
 public class libreria {
     private int libroNum;
+    private ArrayList<libro> list = new ArrayList<libro>();
+
+    public ArrayList<libro> getLibri() {
+        return list;
+    }
+
+    public void aggiungiLibro(libro lib) {
+        list.add(lib);
+    }
+
+    void setLibroNum(){
+        this.libroNum++;
+    }
+
     class libro{
-        private static String genere;
+        private String genere;
+
+        libro(String genere){
+            this.genere = genere;
+        }
 
         //getter
 
         String getGenere(){
-            return libro.genere;
+            return this.genere;
         }
 
         //setter
 
         void setGenere(String genere){
-            libro.genere = genere;
+            this.genere = genere;
+        }
+
+        @Override
+        public String toString() {
+            return ("Genere: " + this.genere);
         }
     }
-    libreria(String Gen){
-        libro.genere = Gen;
-        this.libroNum++;
-    }
-    //override del metodo di default toString  
-    @Override
-    public String toString() {
-        return ("Genere: " + libro.genere + "\nNumero di libri: " + this.libroNum + "\n");
-   }
+    
 }
