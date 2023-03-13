@@ -1,0 +1,5 @@
+database: biblioteca;
+
+autore(nome(pk), annoNascita , annoMorte, nazione);
+
+libro(titolo, autore(fk), annoPubblicazione);
