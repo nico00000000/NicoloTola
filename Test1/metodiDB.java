@@ -146,8 +146,7 @@ public class metodiDB {
                         System.out.print(NomeColonne + " | " + rs.getString(i) + " | ");
                     }
                     System.out.println("\n");
-               }
-
+               }       
             }
 
         } catch (Exception e) {
