@@ -1,8 +1,9 @@
 package UtenteLogin;
 import java.util.ArrayList;
-public class gestisciUtente implements utente {
-    
-    public void eliminaUser(String pass){
+public class gestisciUtente extends utente{
+    ArrayList <utente> users = new ArrayList<utente>();
+
+    /*public void eliminaUser(String pass){
         if(password.equals(pass)){
 
         }
@@ -11,5 +12,5 @@ public class gestisciUtente implements utente {
         if(password.equals(pass)){
             
         }
-    }
+    }*/
 }

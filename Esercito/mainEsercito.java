@@ -10,7 +10,7 @@ public class mainEsercito {
     static void menu(){
         int scelta = inp.insInt("Scegli cosa fare");
         String nome;
-        boolean spec;
+        boolean spec = false;
         int anno;
     //IMPLEMENTA UTILIZZO DEI METODI DI FORZESPECIALI
         switch (scelta) {
@@ -21,13 +21,11 @@ public class mainEsercito {
                 sol = new soldato(nome, anno, spec);
                 //if spec == true inserisci il resto dei dati
                 break;
-
             case 2:
                 System.out.println(es.getNsoldati());
                 break;
 
             case 3:
-                
                 break;
             case 0:
                 System.out.println("\nfine del programma");
@@ -35,6 +33,9 @@ public class mainEsercito {
             default:
                 System.out.println("input errato riprova");
                 break;
+        }
+        if(spec){
+            System.out.println(""); //usa metodi speciali
         }
     }
 }

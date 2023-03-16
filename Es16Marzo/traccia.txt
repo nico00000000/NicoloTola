@@ -1,0 +1,16 @@
+Creare un sistema di Interinale .
+
+Dove UN UTENTE ADMIN
+ POTRà CREARE DELLE POSIZIONE 
+ CHE SARANNO INTERFACCE PER GLI UTENTI NORMALI 
+ CHE PER UN PERIODO POTRANNO AVERE ACESSO A DEI METODI  
+ NOME LAVORO() 
+ DURATA LAVORO()
+CHE SONO PROPRI DELLE INTERFACCE,
+
+UTENTE ( ANNIEXP , NOMECOGNOME[ANCHE UNITI], ETà )
+
+MINIMO 4 Interfacce
+Ogni interfaccia dovrà poi avere il suo metodo per lavorare
+ FaiX()
+in base al suo ruolo

@@ -6,7 +6,7 @@ Se forzepsciali e true
 bisognerà richiamare due metodi specifici GradiSpeciali, Annodiinizio
 In una classe astratta detta ForzeSpeciali che avrà il metodo, oltre i due sopra, specializzazione che sarà un String inserita dal utente
 
-
+ES UtenteLogin
 Andare a creare la classe utente che si possa registrare al nostro sistema 
 che poi tramite una validazione password 
 posso diventare un admin che può eliminare e visualizzare gli altri utenti.
