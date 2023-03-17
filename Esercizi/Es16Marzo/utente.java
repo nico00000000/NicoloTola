@@ -1,4 +1,5 @@
 package Esercizi.Es16Marzo;
+import java.util.ArrayList;
 
 public class utente {
     private String username;
@@ -28,18 +29,18 @@ public class utente {
     }
 
     class admin extends utente{
-        
-        private final String password = "nico13";
+        private ArrayList <utente> listaUser = new ArrayList<utente>();
 
-        admin(String username, String password){
-            super(username, password, eta, anniEsp);
-            if(super.password.equals(this.password)){
-                System.out.println("sei un admin! ");
-            }
+        admin(){
+            super(username = "nico", password = "nico13", eta = 20, anniEsp = 333);
         }
 
-        void creaPosizione(){
+        void addUser(utente u){
+            listaUser.add(u);
+        }
 
+        void cercaLavoratori(){
+            //scorri array e metti gli utenti in un altro array se sono adatti
         }
     
     }

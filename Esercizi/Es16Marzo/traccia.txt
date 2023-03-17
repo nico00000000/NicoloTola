@@ -11,6 +11,7 @@ CHE SONO PROPRI DELLE INTERFACCE,
 UTENTE ( ANNIEXP , NOMECOGNOME[ANCHE UNITI], ETà )
 
 MINIMO 4 Interfacce
+
 Ogni interfaccia dovrà poi avere il suo metodo per lavorare
  FaiX()
 in base al suo ruolo

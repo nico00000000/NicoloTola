@@ -3,6 +3,7 @@ package Esercizi.Es16Marzo;
 public abstract class posizione implements programmatore, tester, tecnicoReti, designer{
     @Override
     public String programma(){
+        
         return "ciao";
     }
 
